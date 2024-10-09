@@ -75,9 +75,12 @@
 
     const category = document.querySelector(".mw-category-columns");
     const links = Array.from(category.querySelectorAll("a"));
-    const de = links.map(anchor => anchor.textContent);
-    const result = de.map(arrayItem => arrayItem.includes("de"));
-    console.log(result);
+    const de = links
+                .map(anchor => anchor.textContent)
+                .filter(streetName => streetName.includes("de"));
+
+    
+    console.log(de);
 
 
     // 7. sort Exercise
